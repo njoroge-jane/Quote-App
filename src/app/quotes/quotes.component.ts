@@ -16,6 +16,11 @@ quotes:Quote[]=[
 showHide(i:any){
   this.quotes[i].moreDetails= !this.quotes[i].moreDetails;
 }
+removeQuote(deleteThis:any, index:any){
+  if(deleteThis){
+    this.quotes.splice(index,1);
+  }
+}
 
   constructor() { 
   }

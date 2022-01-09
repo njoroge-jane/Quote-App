@@ -2,5 +2,5 @@
   <p>{{ quote.quote }}</p>
   <p class="fst-italic">{{quote.author}}</p>
   <p (click)='showHide(i)' class="fst-italic text-center text-primary user-select-none">More.....</p>
-  <app-quote-detail *ngIf='quote.moreDetails' [quote]='quote'></app-quote-detail>
+  <app-quote-detail *ngIf='quote.moreDetails' [quote]='quote' (deleteThis)='removeQuote($event,i)'></app-quote-detail>
 </div>
