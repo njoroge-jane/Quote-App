@@ -1,6 +1,9 @@
 # QuoteApp
 
+This app allows quote generation, where the user can write down a quote and get votes on it depending on how inspirational it is.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
+
 
 ## Development server
 

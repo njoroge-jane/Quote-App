@@ -1,4 +1,7 @@
 export class Quote {
+  reset() {
+    throw new Error('Method not implemented.');
+  }
   moreDetails: boolean;
   constructor(
     public quote: string,
