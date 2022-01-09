@@ -1,6 +1,6 @@
 <section class="container mt-5 row d-flex">
   <h2 class="text-center">Create...</h2>
-  <form (ngSubmit)="createQuote();form.reset();$event.preventDefault()" #form="ngForm">
+  <form (ngSubmit)="createQuote()" #form="ngForm">
     <div class=" m-5 form-group col-md-5">
       <label for="quote">Quote</label>
       <textarea
@@ -70,7 +70,7 @@
 
     <button
       type="submit"
-      class="btn btn-outline-warning btn-primary "
+      class="btn btn-outline-warning btn-primary mb-5"
     >
       Create
     </button>
