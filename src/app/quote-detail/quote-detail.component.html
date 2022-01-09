@@ -1,6 +1,6 @@
 <div class="card-footer">
   <p class="fw-bolder">Submitted by: {{quote.submittedBy}} <br> <i>0 hrs ago</i></p>
-  <i class="fa fa-solid fa-thumbs-up me-5 fa-2x">  0</i>
-  <i class="fa fa-solid fa-thumbs-down ms-5 fa-2x">  0</i>
+  <i (click)='votingUp()' class="fa fa-solid fa-thumbs-up me-5 fa-2x">  {{voteUp}}</i>
+  <i (click)='votingDown()' class="fa fa-solid fa-thumbs-down ms-5 fa-2x">  {{voteDown}}</i>
   <i (click)='deleteQuote(true)' class="fas fa-trash fa-2x position-absolute end-0 text-danger me-3"></i>
 </div>
