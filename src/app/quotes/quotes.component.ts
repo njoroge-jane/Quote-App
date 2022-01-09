@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { Quote } from '../quote';
 
 @Component({
   selector: 'app-quotes',
@@ -7,9 +7,18 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
-  faCoffee = faCoffee;
+quotes:Quote[]=[
+ new Quote('BE CAREFUL','JANE','TRY'),
+ new Quote('BE CAREFUL','JANE','TRY'),
+ new Quote('BE CAREFUL','JANE','TRY')
+];
 
-  constructor() { }
+showHide(i:any){
+  this.quotes[i].moreDetails= !this.quotes[i].moreDetails;
+}
+
+  constructor() { 
+  }
 
   ngOnInit(): void {
   }

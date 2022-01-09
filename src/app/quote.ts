@@ -1,6 +1,6 @@
 export class Quote {
-
-constructor(quote:string, author:string, submittedBy:string){
-
+moreDetails:boolean;
+constructor(public quote:string, public author:string, public submittedBy:string){
+this.moreDetails=false;
 }
 }
