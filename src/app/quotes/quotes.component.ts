@@ -8,9 +8,8 @@ import { Quote } from '../quote';
 })
 export class QuotesComponent implements OnInit {
 quotes:Quote[]=[
- new Quote('BE CAREFUL','JANE','TRY', new Date()),
- new Quote('BE CAREFUL','JANE','TRY', new Date()),
- new Quote('BE CAREFUL','JANE','TRY', new Date())
+ new Quote('Happiness is a journey, not a destination.','BUDDHA','Janey', new Date()),
+ new Quote('Inspiration comes from within yourself. One has to be positive. When you’re positive, good things happen.','DEEPROY','Simon', new Date())
 ];
 
 showHide(i:any){

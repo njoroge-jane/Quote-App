@@ -12,7 +12,7 @@ export class FormComponent implements OnInit {
   newQuote = new Quote('', '', '', new Date());
   
   createQuote() {
-    this.addQuote.emit(this.newQuote);]
+    this.addQuote.emit(this.newQuote);
   }
   
   constructor() {}
