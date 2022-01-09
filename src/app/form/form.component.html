@@ -1,7 +1,7 @@
 <section class="container mt-5">
   <h2 class="text-center">Create...</h2>
   <hr class="col-md-3 d-flex justify-content-center w-25" />
-  <form (ngSubmit)="createQuote()" #form="ngForm">
+  <form (ngSubmit)="createQuote();form.reset();$event.preventDefault()" #form="ngForm">
     <div class="row m-5 form-group">
       <label for="quote">Quote</label>
       <textarea
@@ -50,6 +50,18 @@
       <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
         <p>Your name is required</p>
       </div>
+    </div>
+
+    <div class="row m-5 form-group col-md-6">
+      <label for="date">Date</label>
+      <input
+        name="date"
+        id="submittedBy"
+        type="datetime-local"
+        #name="ngModel"
+        [(ngModel)]="newQuote.date"
+        class="form-control"
+      />
     </div>
 
     <button
