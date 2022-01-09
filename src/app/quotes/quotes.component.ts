@@ -22,8 +22,9 @@ removeQuote(deleteThis:any, index:any){
   }
 }
 
-anotherQuote(quote:any){
+anotherQuote(quote: any){
   this.quotes.push(quote)
+  
 }
 
   constructor() { 

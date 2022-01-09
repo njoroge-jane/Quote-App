@@ -1,40 +1,50 @@
 <section class="container mt-5">
   <h2 class="text-center">Create...</h2>
   <hr class="col-md-3 d-flex justify-content-center w-25" />
-  <form (ngSubmit)='createQuote()' #form="ngForm">
-    <div class="row m-5">
-      <label for="Quote">Quote</label>
+  <form (ngSubmit)="createQuote()" #form="ngForm">
+    <div class="row m-5 form-group">
+      <label for="quote">Quote</label>
       <textarea
+        required
         [(ngModel)]="newQuote.quote"
         name="quote"
-        id=""
+        id="quote"
         cols="30"
         rows="10"
         #quote="ngModel"
+        class="form-control"
         placeholder="Write quote here..."
       ></textarea>
+
       <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
         <p>Fill in a quote</p>
       </div>
     </div>
-    <div class="row m-5 col-md-8">
-      <label for="Author">Author</label>
+    <div class="row m-5 form-group col-md-8">
+      <label for="author">Author</label>
       <input
+        required
+        id="author"
+        name="author"
         type="text"
-        #name="ngModel"
+        #author="ngModel"
         [(ngModel)]="newQuote.author"
+        class="form-control"
         placeholder="Said by..."
       />
-      <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+      <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
         <p>Author is required</p>
       </div>
     </div>
-    <div class="row m-5 col-md-6">
-      <label for="Name">Name</label>
+    <div class="row m-5 form-group col-md-6">
+      <label for="submittedBy">Name</label>
       <input
+        name="name"
+        id="submittedBy"
         type="text"
         #name="ngModel"
         [(ngModel)]="newQuote.submittedBy"
+        class="form-control"
         placeholder="Your Name..."
       />
       <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
@@ -42,7 +52,10 @@
       </div>
     </div>
 
-    <button class="d-flex justify-content-center btn btn-outline-warning">
+    <button
+      type="submit"
+      class="d-flex justify-content-center btn btn-outline-warning"
+    >
       Create
     </button>
   </form>
