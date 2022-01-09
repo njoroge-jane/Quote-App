@@ -1,6 +1,20 @@
-<div class="container shadow col-md-8 border card mt-5" *ngFor='let quote of quotes, let i=index'>
+<div
+  class="container shadow col-md-8 border card mt-5"
+  *ngFor="let quote of quotes; let i = index"
+>
   <p>{{ quote.quote }}</p>
-  <p class="fst-italic">{{quote.author}}</p>
-  <p (click)='showHide(i)' class="fst-italic text-center text-primary user-select-none">More.....</p>
-  <app-quote-detail *ngIf='quote.moreDetails' [quote]='quote' (deleteThis)='removeQuote($event,i)'></app-quote-detail>
+  <p class="fst-italic">{{ quote.author }}</p>
+  <p
+    (click)="showHide(i)"
+    class="fst-italic text-center text-primary user-select-none"
+  >
+    More.....
+  </p>
+  <app-quote-detail
+    *ngIf="quote.moreDetails"
+    [quote]="quote"
+    (deleteThis)="removeQuote($event, i)"
+  ></app-quote-detail>
 </div>
+
+<app-form></app-form>
