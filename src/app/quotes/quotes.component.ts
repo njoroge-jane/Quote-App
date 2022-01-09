@@ -8,9 +8,9 @@ import { Quote } from '../quote';
 })
 export class QuotesComponent implements OnInit {
 quotes:Quote[]=[
- new Quote('BE CAREFUL','JANE','TRY'),
- new Quote('BE CAREFUL','JANE','TRY'),
- new Quote('BE CAREFUL','JANE','TRY')
+ new Quote('BE CAREFUL','JANE','TRY', new Date()),
+ new Quote('BE CAREFUL','JANE','TRY', new Date()),
+ new Quote('BE CAREFUL','JANE','TRY', new Date())
 ];
 
 showHide(i:any){
@@ -23,8 +23,8 @@ removeQuote(deleteThis:any, index:any){
 }
 
 anotherQuote(quote: any){
-  this.quotes.push(quote)
-  
+  this.quotes.push(quote);
+
 }
 
   constructor() { 
